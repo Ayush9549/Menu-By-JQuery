@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="./assets/css/menu.css">
+	</head>
+	<body>
+		<div class="main_container">
+			<div class="title"><div class="name">Dashboard <div class="arro"></div></div></div>
+			<div class="title1"><div class="name">Message <div class="arro"></div></div></div>
+			<div class="title2"><div class="name">Jobs <div class="arro"></div></div></div>
+			<div class="title3"><div class="name">Profile <div class="arro"></div></div></div>
+			<div class="arrow">
+				<img src="https://icon-library.com/images/greater-than-icon/greater-than-icon-8.jpg">
+			</div>
+			<div class="container">
+				
+				<div class="logo">
+					<img src="./assets/img/loading.svg">Mangrove
+				</div>
+				<div class="dashboard style">
+					<img src="https://pics.freeicons.io/uploads/icons/png/7133934721556258236-512.png"><span>Dashboard</span>
+				</div>
+				<div class="msg style">
+					<img src="https://pics.freeicons.io/uploads/icons/png/15378291991558965373-512.png"><span>Message</span>
+				</div>
+				<div class="jobs style">
+					<img src="https://pics.freeicons.io/uploads/icons/png/12878080171529652579-512.png"><span>Jobs</span>
+				</div>
+				<div class="profile style">
+					<img src="https://cdn1.iconfinder.com/data/icons/basic-ui-vol-5-32-px/32/ui-user-setting-profile-manage-512.png"><span>Profile</span>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
+		<script>
+			// $(".style").css("display","flex");
+			$(".dashboard").css({"opacity":"5", "transition":"0.2s"});
+			$(".msg").css({"opacity":"5", "transition":"0.5s"});
+			$(".jobs").css({"opacity":"5", "transition":"0.7s"});
+			$(".profile").css({"opacity":"5", "transition":"0.9s"});
+			$(".main-container").hover(function(){$(".arrow").show();},function(){$(".arrow").hide();});
+		$(".arrow").css("display","flex")
+			$(".msg").click(function(){$(".msg").css("background","rgba(0, 0, 255, 0.9)");});
+			// $(".")
+					var isOpen=false;
+				$(".arrow").click(function(){
+					if (isOpen==false)
+					{
+						$(".container").animate({"width":"45px"});
+						$(".main_container").animate({"width":"65px"});
+						$(".style").css("display","flex");
+						$(".style").css("width","20px");
+						$(".arrow").css("transform","rotate(180deg)");
+						$(".dashboard>span").css({"opacity":"0"});
+						$(".style>span").css("opacity","0");
+						$(".dashboard").hover(function(){$(".title").show();},function(){$(".title").hide();});
+						$(".msg").hover(function(){$(".title1").show();},function(){$(".title1").hide();});
+						$(".jobs").hover(function(){$(".title2").show();},function(){$(".title2").hide();});
+						$(".profile").hover(function(){$(".title3").show();},function(){$(".title3").hide();});
+							isOpen=true;
+					}
+					else
+					{
+						$(".dashboard>span").css({"opacity":"5", "transition":"0.2s"});
+						$(".msg>span").css({"opacity":"5", "transition":"0.5s"});
+						$(".jobs>span").css({"opacity":"5", "transition":"0.7s"});
+						$(".profile>span").css({"opacity":"5", "transition":"0.9s"});
+
+						$(".container").animate({"width":"250px"});
+						$(".main_container").animate({"width":"265px"});
+						$(".arrow").css("transform","rotate(0deg)");
+						$(".style").css("width","200");
+						$(".arrow").css("right","-3%");
+						
+						$(".dashboard").hover(function(){$(".title").hide();},function(){$(".title").hide();});
+						$(".msg").hover(function(){$(".title1").hide();},function(){$(".title1").hide();});
+						$(".jobs").hover(function(){$(".title2").hide();},function(){$(".title2").hide();});
+						$(".profile").hover(function(){$(".title3").hide();},function(){$(".title3").hide();});
+							isOpen=false;
+
+					}
+				});
+				$(".dashboard").click(function(){
+					barSlide();
+				});
+			function barSlide()
+				{
+					setTimeout(function(){
+						$(".dashboard").css({
+							"background":"rgba(0,0,255,0.9)","color":"#fff"
+						});
+						$(".dashboard>img").css({"filter":"invert(100%)"});
+						$(".msg").css({
+							"background":"transparent","color":"#000"
+						});
+						$(".msg>img").css({"filter":"invert(0%)"});
+						$(".jobs").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".jobs>img").css({"filter":"invert(0%)"});
+						$(".profile").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".profile>img").css({"filter":"invert(0%)"});
+					},300);
+				}
+				$(".msg").click(function(){
+					barSlide1();
+				});
+			function barSlide1()
+				{
+					setTimeout(function(){
+						$(".dashboard").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".dashboard>img").css({"filter":"invert(0%)"});
+						$(".msg").css({
+							"background":"rgba(0,0,255,0.9)","color":"#fff"
+						});
+						$(".msg>img").css({"filter":"invert(100%)"});
+						$(".jobs").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".jobs>img").css({"filter":"invert(0%)"});
+						$(".profile").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".profile>img").css({"filter":"invert(0%)"});
+					},300);
+				}
+				$(".jobs").click(function(){
+					barSlide2();
+				});
+			function barSlide2()
+				{
+					setTimeout(function(){
+						$(".dashboard").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".dashboard>img").css({"filter":"invert(0%)"});
+						$(".msg").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".msg>img").css({"filter":"invert(0%)"});
+						$(".jobs").css({
+							"background":"rgba(0,0,255,0.9)","color":"#fff"
+						});
+						$(".jobs>img").css({"filter":"invert(100%)"});
+						$(".profile").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".profile>img").css({"filter":"invert(0%)"});
+					},300);
+				}
+				$(".profile").click(function(){
+					barSlide3();
+				});
+			function barSlide3()
+				{
+					setTimeout(function(){
+						$(".dashboard").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".dashboard>img").css({"filter":"invert(0%)"});
+						$(".msg").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".jobs").css({
+							"background":"inherit","color":"#000"
+						});
+						$(".jobs>img").css({"filter":"invert(0%)"});
+						$(".profile").css({
+							"background":"rgba(0,0,255,0.9)","color":"#fff"
+						});
+						$(".profile>img").css({"filter":"invert(100%)"});
+						// $(".profile>img").css({"filter":"invert(0%)"});
+					},300);
+				}
+		</script>
+	</body>
+</html>
